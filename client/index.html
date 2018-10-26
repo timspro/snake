@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Snake by Tim Sprowl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        height: 100%;
+        background-color: black;
+        text-align: center;
+      }
+      #container {
+        position: relative;
+        margin: 0 auto;
+        font-family: Monospace;
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+        display: inline-flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      #info {
+        display: none;
+        justify-content: space-between;
+      }
+      #canvas {
+        padding: 2px;
+        display: none;
+        border: 2px solid white;
+        align-self: flex-start;
+      }
+      #death {
+        display: none;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        opacity: 1;
+        transition: 5s opacity ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="death">DEATH!</div>
+      <div id="info">
+        <div>
+          <span>Score</span>
+          <span id="score">0</span>
+        </div>
+        <div>
+          <span>Speed</span>
+          <span id="speed">4</span>
+        </div>
+      </div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="js/snake.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <script type="module" src="js/renderer.js"></script>
+  </body>
+</html>
